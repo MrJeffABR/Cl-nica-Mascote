@@ -1,5 +1,3 @@
-import { GoogleGenAI } from "@google/genai";
-
 // System instruction to guide the AI's persona
 const SYSTEM_INSTRUCTION = `
 Você é o assistente virtual da 'Clínica Mascote', localizada em Confresa, Mato Grosso.
@@ -26,29 +24,41 @@ Regras:
 `;
 
 export const sendMessageToGemini = async (message: string, history: string[]): Promise<string> => {
-  if (!process.env.API_KEY) {
+  const apiKey = process.env.API_KEY;
+
+  if (!apiKey) {
+    console.warn("API_KEY não encontrada. O chat funcionará em modo fallback.");
     return "Desculpe, meu sistema de comunicação está temporariamente indisponível. Por favor, contate-nos via WhatsApp.";
   }
 
   try {
-    const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
-    
-    // We maintain a simple history context string for this lightweight implementation
-    const prompt = `
-    ${SYSTEM_INSTRUCTION}
-    
-    Histórico da conversa:
-    ${history.join('\n')}
-    
-    Nova mensagem do cliente: ${message}
-    `;
+    // Construct the prompt manually for the REST API
+    const fullPrompt = `${SYSTEM_INSTRUCTION}\n\nHistórico da conversa:\n${history.join('\n')}\n\nNova mensagem do cliente: ${message}`;
 
-    const response = await ai.models.generateContent({
-      model: 'gemini-2.5-flash', // Fast and efficient for chat
-      contents: prompt,
+    const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        contents: [{
+          parts: [{
+            text: fullPrompt
+          }]
+        }]
+      })
     });
 
-    return response.text || "Desculpe, não entendi. Poderia repetir?";
+    if (!response.ok) {
+      throw new Error(`Erro na API: ${response.statusText}`);
+    }
+
+    const data = await response.json();
+    
+    // Extract text from the response structure
+    const text = data.candidates?.[0]?.content?.parts?.[0]?.text;
+
+    return text || "Desculpe, não entendi. Poderia repetir?";
   } catch (error) {
     console.error("Erro ao comunicar com Gemini:", error);
     return "Tive um pequeno problema técnico. Pode nos chamar no WhatsApp?";
