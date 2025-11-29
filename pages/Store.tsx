@@ -65,15 +65,15 @@ const Store: React.FC = () => {
   return (
     <div className="animate-fade-in bg-gray-50 min-h-screen">
       {/* Header */}
-      <div className="bg-brand-orange py-16 text-center text-white">
+      <div className="bg-brand-teal py-16 text-center text-white">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl md:text-5xl font-display font-bold mb-3 flex items-center justify-center gap-3">
             <ShoppingBag className="w-10 h-10" /> Pet Shop Mascote
           </h1>
-          <p className="text-xl md:text-2xl font-medium text-orange-50 mb-6">
+          <p className="text-xl md:text-2xl font-medium text-teal-50 mb-6">
             Itens essenciais para o dia a dia do seu pet
           </p>
-          <p className="text-orange-100 max-w-2xl mx-auto text-lg opacity-90">
+          <p className="text-teal-100 max-w-2xl mx-auto text-lg opacity-90">
             Os melhores produtos para o bem-estar do seu amigo. Rações, brinquedos e acessórios com a qualidade que você confia.
           </p>
         </div>
@@ -97,7 +97,7 @@ const Store: React.FC = () => {
               
               <div className="p-6">
                 <h3 className="text-xl font-bold text-brand-dark mb-2 leading-tight">{product.name}</h3>
-                <p className="text-brand-orange font-bold text-lg mb-4">{product.price}</p>
+                <p className="text-brand-teal font-bold text-lg mb-4">{product.price}</p>
                 
                 <a 
                   href={getWhatsappLink(product.name)}
@@ -121,7 +121,7 @@ const Store: React.FC = () => {
              href={`https://wa.me/${whatsappNumber}`}
              target="_blank"
              rel="noreferrer"
-             className="inline-flex items-center gap-2 text-brand-orange font-bold hover:underline"
+             className="inline-flex items-center gap-2 text-brand-teal font-bold hover:underline"
           >
             Falar com um atendente <MessageCircle className="w-4 h-4" />
           </a>

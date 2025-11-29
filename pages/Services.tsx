@@ -74,12 +74,12 @@ const Services: React.FC = () => {
       
       {/* Visual Break */}
       <div className="container mx-auto px-4 py-12 mb-12">
-        <div className="bg-brand-orange rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between text-white shadow-xl">
+        <div className="bg-brand-orange rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between text-brand-dark shadow-xl">
             <div className="mb-6 md:mb-0">
                 <h3 className="text-2xl md:text-3xl font-bold mb-2 font-display">Precisa de um exame específico?</h3>
-                <p className="opacity-90">Realizamos Ultrassom, Eletrocardiograma e Exames Laboratoriais.</p>
+                <p className="font-medium opacity-90">Realizamos Ultrassom, Eletrocardiograma e Exames Laboratoriais.</p>
             </div>
-            <a href="https://wa.me/5566984242728" className="bg-white text-brand-orange px-8 py-3 rounded-full font-bold hover:bg-gray-100 transition whitespace-nowrap">
+            <a href="https://wa.me/5566984242728" className="bg-white text-brand-dark px-8 py-3 rounded-full font-bold hover:bg-gray-100 transition whitespace-nowrap shadow-md">
                 Consultar Disponibilidade
             </a>
         </div>

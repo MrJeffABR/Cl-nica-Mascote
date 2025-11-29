@@ -31,7 +31,7 @@ const Layout: React.FC = () => {
           <div className="flex items-center gap-4 flex-wrap justify-center md:justify-start">
              <span className="flex items-center gap-1"><MapPin className="w-3 h-3" /> Confresa, MT</span>
              <a href={`tel:+${WHATSAPP_NUMBER}`} className="flex items-center gap-1 hover:text-brand-light transition"><Phone className="w-3 h-3" /> {DISPLAY_PHONE}</a>
-             <span className="flex items-center gap-1 font-bold bg-brand-orange px-2 py-0.5 rounded text-white animate-pulse">
+             <span className="flex items-center gap-1 font-bold bg-brand-orange px-2 py-0.5 rounded text-brand-dark animate-pulse">
                <Ambulance className="w-3 h-3" /> Plantão 24h | Emergências
              </span>
           </div>
@@ -50,12 +50,12 @@ const Layout: React.FC = () => {
           <div className="flex justify-between items-center">
             {/* Logo */}
             <Link to="/" className="flex items-center gap-2 group" onClick={() => setIsMenuOpen(false)}>
-              <div className="w-10 h-10 bg-brand-orange rounded-full flex items-center justify-center text-white font-bold text-xl group-hover:scale-105 transition duration-300">
+              <div className="w-10 h-10 bg-brand-orange rounded-full flex items-center justify-center text-brand-dark font-bold text-xl group-hover:scale-105 transition duration-300">
                 M
               </div>
               <div className="flex flex-col leading-tight">
-                <span className="font-display font-bold text-xl text-brand-dark tracking-wide">CLÍNICA MASCOTE</span>
-                <span className="text-xs text-brand-teal font-medium tracking-widest uppercase">Veterinária & Lab</span>
+                <span className="font-display font-bold text-xl text-brand-teal tracking-wide">CLÍNICA MASCOTE</span>
+                <span className="text-xs text-brand-dark font-medium tracking-widest uppercase">Veterinária & Lab</span>
               </div>
             </Link>
 
@@ -65,7 +65,7 @@ const Layout: React.FC = () => {
                 <Link
                   key={link.path}
                   to={link.path}
-                  className={`text-sm font-medium transition-colors duration-200 hover:text-brand-orange ${
+                  className={`text-sm font-medium transition-colors duration-200 hover:text-brand-teal ${
                     isActive(link.path) ? 'text-brand-teal font-bold' : 'text-gray-600'
                   }`}
                 >
@@ -76,7 +76,7 @@ const Layout: React.FC = () => {
                 href={`https://wa.me/${WHATSAPP_NUMBER}`}
                 target="_blank" 
                 rel="noreferrer"
-                className="bg-brand-orange text-white px-5 py-2 rounded-full font-medium text-sm hover:bg-orange-600 transition shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
+                className="bg-brand-orange text-brand-dark px-5 py-2 rounded-full font-bold text-sm hover:bg-yellow-400 transition shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
               >
                 Agendar
               </a>
@@ -114,7 +114,7 @@ const Layout: React.FC = () => {
                 target="_blank"
                 rel="noreferrer"
                 onClick={() => setIsMenuOpen(false)}
-                className="bg-brand-orange text-white text-center py-3 rounded-lg font-medium mt-2 shadow-sm active:scale-95 transition-transform"
+                className="bg-brand-orange text-brand-dark text-center py-3 rounded-lg font-bold mt-2 shadow-sm active:scale-95 transition-transform"
               >
                 Agendar no WhatsApp
               </a>
@@ -149,7 +149,7 @@ const Layout: React.FC = () => {
                   href="https://www.instagram.com/mascoteclab/" 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="bg-gray-800 p-2 rounded-full hover:bg-brand-orange transition"
+                  className="bg-gray-800 p-2 rounded-full hover:bg-brand-orange hover:text-brand-dark transition"
                 >
                   <Instagram className="w-5 h-5" />
                 </a>
@@ -157,7 +157,7 @@ const Layout: React.FC = () => {
                   href={MAPS_LINK}
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="bg-gray-800 p-2 rounded-full hover:bg-brand-orange transition"
+                  className="bg-gray-800 p-2 rounded-full hover:bg-brand-orange hover:text-brand-dark transition"
                   aria-label="Ver no Google Maps"
                 >
                   <MapPin className="w-5 h-5" />

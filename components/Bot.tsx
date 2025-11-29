@@ -121,7 +121,7 @@ const Bot: React.FC = () => {
             <button
               onClick={handleSend}
               disabled={isLoading || !input.trim()}
-              className="bg-brand-orange text-white p-2 rounded-full hover:bg-orange-600 transition disabled:opacity-50 disabled:cursor-not-allowed"
+              className="bg-brand-orange text-brand-dark p-2 rounded-full hover:bg-yellow-400 transition disabled:opacity-50 disabled:cursor-not-allowed"
             >
               <Send className="w-4 h-4" />
             </button>

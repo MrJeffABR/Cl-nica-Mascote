@@ -23,7 +23,7 @@ const Home: React.FC = () => {
             </div>
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-brand-dark leading-tight mb-6">
-              Amor e cuidado que seu pet <span className="text-brand-orange">merece.</span>
+              Amor e cuidado que seu pet <span className="text-brand-teal">merece.</span>
             </h1>
             <p className="text-gray-600 text-lg mb-8 leading-relaxed max-w-lg">
               Na Clínica Mascote, oferecemos medicina veterinária de excelência. Consultas, internações, cirurgias, ultrassom, raio-x e exames laboratoriais completos.
@@ -61,7 +61,7 @@ const Home: React.FC = () => {
               </div>
               <div>
                 <p className="text-xs text-gray-500 font-bold uppercase">Cuidando com amor</p>
-                <p className="font-bold text-brand-dark">Desde 2019</p>
+                <p className="font-bold text-brand-teal">Desde 2019</p>
               </div>
             </div>
           </div>
@@ -94,12 +94,12 @@ const Home: React.FC = () => {
               desc="Diagnóstico por imagem preciso com Ultrassom e Eletrocardiograma na própria clínica."
             />
             <FeatureCard 
-              icon={<Scissors className="w-8 h-8 text-purple-500" />}
+              icon={<Scissors className="w-8 h-8 text-brand-teal" />}
               title="Estética Animal"
               desc="Banho e tosa com produtos de qualidade para o bem-estar do seu pet."
             />
              <FeatureCard 
-              icon={<Heart className="w-8 h-8 text-red-500" />}
+              icon={<Heart className="w-8 h-8 text-brand-orange" />}
               title="Mascote Lab"
               desc="Laboratório próprio para exames rápidos e precisos para diagnósticos imediatos."
             />
@@ -114,12 +114,12 @@ const Home: React.FC = () => {
              <Ambulance className="w-4 h-4" /> EMERGÊNCIA 24 HORAS
           </div>
           <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">Seu pet precisa de ajuda agora?</h2>
-          <p className="text-teal-100 text-lg mb-8 max-w-2xl mx-auto">
+          <p className="text-teal-50 text-lg mb-8 max-w-2xl mx-auto">
             Não espere o quadro agravar. Nossa equipe de plantão está pronta para acolher e cuidar do seu melhor amigo.
           </p>
           <a 
             href={whatsappLink}
-            className="inline-flex items-center gap-2 bg-brand-orange hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transition transform hover:-translate-y-1"
+            className="inline-flex items-center gap-2 bg-brand-orange hover:bg-yellow-400 text-brand-dark font-bold py-3 px-8 rounded-full shadow-lg transition transform hover:-translate-y-1"
           >
             Falar com Veterinário
           </a>
