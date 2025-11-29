@@ -46,13 +46,14 @@ const Home: React.FC = () => {
 
           {/* Hero Image */}
           <div className="w-full md:w-1/2 relative">
-            <div className="relative rounded-3xl overflow-hidden shadow-2xl rotate-2 hover:rotate-0 transition duration-500 ease-out">
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl rotate-2 hover:rotate-0 transition duration-500 ease-out bg-white">
               <img 
-                src="https://images.unsplash.com/photo-1553688738-a278b9f063e0?auto=format&fit=crop&q=80&w=1000" 
-                alt="Veterinária examinando um cachorro feliz" 
+                src="https://static.vecteezy.com/system/resources/thumbnails/067/369/547/small/a-happy-dog-wearing-blue-sunglasses-and-matching-collar-showcasing-playful-and-cheerful-expression-dog-ears-are-perked-up-adding-to-its-lively-appearance-png.png" 
+                alt="Cachorro feliz usando óculos de sol" 
                 className="w-full h-auto object-cover"
+                referrerPolicy="no-referrer"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent pointer-events-none"></div>
             </div>
             {/* Decorative Element - Since 2019 */}
             <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-xl flex items-center gap-3 animate-bounce hidden md:flex">
